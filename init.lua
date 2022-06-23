@@ -1,6 +1,6 @@
 local storage = minetest.get_mod_storage()
 
-local latest_welcome_version = 1
+local latest_welcome_version = 2
 
 local hypertext_text = [[
 <center><big>Welcome to <b>The Minecraftn't Classic Server</b>!</big></center>
@@ -20,7 +20,7 @@ local formspec_text = "formspec_version[4]"
 	.."size[14,11]"
 	.."box[0.25,0.25;13.5,9.5;#00000088]"
 	.."hypertext[0.5,0.5;13,9;welcometext;"..hypertext_text.."]"
-	.."button[4.5,9.9;5,0.9;btn_confirm;OK, I agree to the rules]"
+	.."button_exit[4.5,9.9;5,0.9;btn_confirm;OK, I agree to the rules]"
 
 minetest.register_on_joinplayer(function(player, last_login)
 	local playername = player:get_player_name()
